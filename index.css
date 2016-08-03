@@ -1,15 +1,17 @@
 html{
   height: 100%;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
 body {
   height: 100%;
-  background-color: grey;
+  background-color: white;
 }
+
 .panel-heading{
   height: 10%;
 }
 .panel-body{
-  height: 70%;
+  background-color: white;
 }
 .panel-footer {
   width: 100%;
@@ -20,23 +22,15 @@ body {
   font-size: 120%;
   text-align: center;
 }
+.color-text {
+  color: black !important;
+  font-size: 170% !important;
+}
 .center{
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.round-button-circle-small {
-  width: 100px;
-	height: 100px;
-  border-radius: 100%;
-  background: #C4FFFF;
-  display: flex;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
-  font-size: 150%;
-  border: 5px solid #FFFFFF;
 }
 #title{
   height: 10%;
@@ -44,86 +38,33 @@ body {
 #slides {
   display: none
 }
-
-#slides .slidesjs-navigation {
-  margin-top:3px;
+.slider .slides {
+  background-color: white;
 }
-
-#slides .slidesjs-previous {
-  margin-right: 5px;
-  float: left;
-}
-
-#slides .slidesjs-next {
-  margin-right: 5px;
-  float: left;
-}
-
-.slidesjs-pagination {
-  margin: 6px 0 0;
-  float: right;
-  list-style: none;
-
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.slidesjs-pagination li {
-  float: left;
-  margin: 0 1px;
-}
-
-.slidesjs-pagination li a {
-  display: block;
-  width: 13px;
-  height: 0;
-  padding-top: 13px;
-  background-image: url(src/Pic/pagination.png);
-  background-position: 0;
-  float: left;
-  overflow: hidden;
-}
-
-.slidesjs-pagination li a.active,
-.slidesjs-pagination li a:hover.active {
-  background-position: 0 -13px
-}
-.slidesjs-next{
-  position: absolute;
-  bottom: 0;
-
-}
-.slidesjs-previous{
-  position: absolute;
-  bottom: 0;
-  margin-left: 65px;
-}
-.slidesjs-pagination li a:hover {
-  background-position: 0 -26px
-}
-
-#slides a:link,
-#slides a:visited {
-  color: #333
-}
-
-#slides a:hover,
-#slides a:active {
-  color: #9e2020
+.btn-floating.btn-large {
+  height: 100px;
+  width: 100px;
 }
 
 .navbar {
   overflow: hidden
 }
-
-#slides, .slidesjs-container {
-  height: 100% !important;
-  overflow: auto !important;
+.home-btn{
+  padding-bottom:   20px;
 }
-
 #bullet-wrapper {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+button.btn-floating {
+    height: 140px;
+    width: 140px;
+}
+
+.slider{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
