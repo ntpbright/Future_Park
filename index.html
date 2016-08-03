@@ -14,6 +14,11 @@
 
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" href="./index.css">
+  <!-- Compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> -->
+
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -143,12 +148,32 @@
           <font face="verdana">Future Park</font>
         </a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <!-- <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li> -->
         </ul>
       </div>
     </nav>
+  </div>
+
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+  </ul>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
   </div>
   <div class="slider" style = "width:100%;">
     <ul class="slides">
@@ -158,28 +183,39 @@
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-moisture" class = "btn-floating waves-effect waves-light " title = "Moisture"><img id = "moistureImg" src="./src/Pic/Measurement.png" alt="Measurement" style="width:50%;height:50%;"></button>
+                  <button type="button" id = "btn-moisture" class = "btn-floating waves-effect waves-light " title = "Moisture">
+                    <span id = "moistureHid" hidden>12</span>
+                    <img id = "moistureImg" src="./src/Pic/Measurement.png" alt="Measurement" style="width:50%;height:50%;"/>
+                  </button>
                 </div>
               </div>
             </div>
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-sunshine" class = "btn-floating waves-effect waves-light" title = "Sunshine"><img id = "sunshineImg" src="./src/Pic/sun.png" alt="Sun" style="width:50%;height:50%;"></button>
+                  <button type="button" id = "btn-sunshine" class = "btn-floating waves-effect waves-light" title = "Sunshine">
+                  <img id = "sunshineImg" src="./src/Pic/sun.png" alt="Sun" style="width:50%;height:50%;">
+                </button>
                 </div>
               </div>
             </div>
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-water" class = "btn-floating waves-effect waves-light" title = "Water"><img id = "waterImg" src="./src/Pic/Water_Drop.png" alt="Water" style="width:50%;height:50%;"></button>
+                  <button type="button" id = "btn-temp" class = "btn-floating waves-effect waves-light" title = "Temperature">
+                    <span id = "tempHid" hidden >12</span>
+                    <img id = "tempImg" src="./src/Pic/Temperature_icon.png" alt="Temp" style="width:50%;height:50%;">
+                  </button>
                 </div>
               </div>
             </div>
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-Light" class = "btn-floating waves-effect waves-light" title = "Light"><img id = "lightImg" src="./src/Pic/light.png" alt="Light" style="width:50%;height:50%;"></button>
+                  <button type="button" id = "btn-Light" class = "btn-floating waves-effect waves-light" title = "Light">
+                    <img hidden id="lightonImg" src="https://s31.postimg.org/q3t7cj8qz/light2.png" style="width:50%;height:50%;">
+                    <img id = "lightoffImg" src="./src/Pic/light.png" alt="Light" style="width:50%;height:50%;">
+                  </button>
                 </div>
               </div>
             </div>
@@ -187,21 +223,30 @@
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-motionAlert" class = "btn-floating waves-effect waves-light" title = "Motion Alert"><img id = "roofImg" src="./src/Pic/motion1.png" alt="Roof" style="width:70%;height:70%;"></button>
+                  <button type="button" id = "btn-motionAlert" class = "btn-floating waves-effect waves-light" title = "Motion Alert">
+                    <img hidden id="alertonImg" src="https://s31.postimg.org/ab9o2benv/image.png" style="width:70%;height:70%;">
+                    <img id = "alertoffImg" src="./src/Pic/motion1.png" alt="Roof" style="width:70%;height:70%;">
+                  </button>
                 </div>
               </div>
             </div>
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-roof" class = "btn-floating waves-effect waves-light" title = "Roof"><img id = "roofImg" src="./src/Pic/roof_off.png" alt="Roof" style="width:50%;height:50%;"></button>
+                  <button type="button" id = "btn-roof" class = "btn-floating waves-effect waves-light" title = "Roof">
+                    <img hidden id="roofonImg" src="https://s32.postimg.org/hqb8xg6ad/Emoji_u2614_svg.png" style="width:50%;height:50%;">
+                    <img id = "roofoffImg" src="./src/Pic/roof_off.png" alt="Roof" style="width:50%;height:50%;">
+                  </button>
                 </div>
               </div>
             </div>
             <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
-                  <button type="button" id = "btn-temp" class = "btn-floating waves-effect waves-light" title = "Temperature"><img id = "tempImg" src="./src/Pic/Temperature_icon.png" alt="Temp" style="width:50%;height:50%;"></button>
+                  <button type="button" id = "btn-water" class = "btn-floating waves-effect waves-light" title = "Water">
+                    <img hidden id="wateronImg" src="https://s32.postimg.org/uf09wajk5/Water_Drop_Icon_Vector.png" style="width:50%;height:50%;">
+                    <img id = "wateroffImg" src="./src/Pic/Water_Drop.png" alt="Water" style="width:50%;height:50%;">
+                  </button>
                 </div>
               </div>
             </div>
@@ -229,9 +274,10 @@
             <p class = "color-text">Suggestion</p>
           </div>
           <div class = "col-md-2 col-sm-2 col-xs-2 center">
-            <p> </p>
+
           </div>
           <div class = "col-md-3 col-sm-3 col-xs-3 center">
+            <button type="button" id = "btn-refresh" class = "btn-floating waves-effect waves-light square-btn" title = "Refresh"><img id = "refreshImg" src="./src/Pic/refresh.png" alt="Refresh" style="width:50%;height:50%;"></button>
           </div>
           <div class = "col-md-3 col-sm-3 col-xs-3 center">
           </div>
@@ -245,11 +291,128 @@
 
   <script type='text/javascript'>
   $(document).ready(function(){
-    $('.slider').slider({interval: 30000});
+    $('.slider').slider({interval: 100000000000000000000});
   });
   $(document).ready(function() {
     Materialize.updateTextFields();
   });
+
+  var moistureStatus = 0;
+  var moistureActivate = false;
+  var tempStatus = 0;
+  var tempActivate = false;
+  var lightStatus = 'lightoff';
+  // var lightActivate = false;
+  var sunshineStatus = 'light';
+  var initialWaterCount = 0;
+  // var motionActivate = false;
+  var motionStatus = '0';
+  var roofStatus = '0';
+  var refreshStatus = 0;
+
+  document.getElementById("btn-moisture").addEventListener("click", moistureStatusAction);
+  document.getElementById("btn-water").addEventListener("click", waterStatusAuto);
+  // document.getElementById("btn-Light").addEventListener("click", lightStatusByClick);
+  document.getElementById("btn-motionAlert").addEventListener("click", motionStatusByClick);
+  document.getElementById("btn-roof").addEventListener("click", roofStatusAuto);
+  document.getElementById("btn-temp").addEventListener("click", tempStatusAction);
+  // document.getElementById("btn-refresh").addEventListener("click", refreshStatusAction);
+
+  setInterval(function(){
+    $.ajax({
+      url:'http://10.32.176.4/expecto_patronum'
+    })
+    .done(function(data){
+      var str = data;
+      var res = str.split(",");
+      moistureStatus = res[0];
+      lightStatus = res[6];
+      lightStatusAuto();
+      motionStatus = res[8];
+      motionStatusAuto();
+      roofStatus = res[10];
+      roofStatusAuto();
+      waterStatus = res[12];
+      waterStatusAuto();
+    });
+  },1000);
+
+  function moistureStatusAction() {
+    if(!moistureActivate) {
+      $('#moistureImg').attr("hidden","");
+      $('#moistureHid').removeAttr("hidden");
+      moistureActivate = true;
+    }else {
+      $('#moistureImg').removeAttr("hidden");
+      $('#moistureHid').attr("hidden","");
+      moistureActivate = false;
+    }
+  }
+  function sunshineStatusAction() {
+
+
+  }
+  function tempStatusAction() {
+    if(tempActivate == false) {
+      $('#tempImg').attr("hidden","");
+      $('#tempHid').removeAttr("hidden");
+      tempActivate = true;
+    }else {
+      $('#tempImg').removeAttr("hidden");
+      $('#tempHid').attr("hidden","");
+      tempActivate = false;
+    }
+  }
+  function lightStatusAuto() {
+    if(lightStatus === 'lightoff') {
+      $('#lightoffImg').attr("hidden","");
+      $('#lightonImg').removeAttr("hidden");
+      lightStatus = 'lighton'
+    }else {
+      $('#lightoffImg').removeAttr("hidden");
+      $('#lightonImg').attr("hidden","");
+      lightStatus = 'lightoff'
+    }
+  }
+  function motionStatusAuto() {
+    console.log('1');
+    if(motionStatus === '0') {
+      $('#alertoffImg').attr("hidden","");
+      $('#alertonImg').removeAttr("hidden");
+      motionStatus = '1'
+    }else {
+      $('#alertoffImg').removeAttr("hidden");
+      $('#alertonImg').attr("hidden","");
+      motionStatus = '0'
+    }
+  }
+  function motionStatusByClick(){
+    $('#alertoffImg').attr("hidden","");
+    $('#alertonImg').removeAttr("hidden");
+  }
+  function roofStatusAuto() {
+    console.log('2');
+    if(roofStatus === '0') {
+      $('#roofoffImg').attr("hidden","");
+      $('#roofonImg').removeAttr("hidden");
+      roofStatus = '1'
+    }else {
+      $('#roofoffImg').removeAttr("hidden");
+      $('#roofonImg').attr("hidden","");
+      roofStatus = '0'
+    }
+  }
+  function waterStatusAuto() {
+    if(waterStatus === '0') {
+      $('#wateroffImg').attr("hidden","");
+      $('#wateronImg').removeAttr("hidden");
+      waterStatus = '1'
+    }else {
+      $('#wateroffImg').removeAttr("hidden");
+      $('#wateronImg').attr("hidden","");
+      waterStatus = '0'
+    }
+  }
   </script>
 </body>
 
