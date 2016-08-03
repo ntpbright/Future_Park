@@ -70,50 +70,54 @@
     </ul>
     <div id="test1" class="col s12">
       <div class="panel-body">
-        <div class="caption left-align">
-          <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
-            <div>
-              <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-moisture" class = "btn-floating waves-effect waves-light " title = "Moisture">
-                  <div id="moistSpan"hidden></div>
-                  <img id = "moistureImg" src="./src/Pic/Measurement.png" alt="Measurement" style="width:50%;height:50%;"/>
-                </button>
+        <div class = "col-md-12 col-sm-12 col-xs-12 btn-row">
+          <div class="caption left-align">
+            <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-moisture" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Moisture" data-position="top">
+                    <div id="moistSpan"hidden></div>
+                    <img id = "moistureImg" src="./src/Pic/Measurement.png" alt="Measurement" style="width:50%;height:50%;"/>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-sunshine" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Sunshine" data-position="top">
+                    <img id = "sunshineImg" src="./src/Pic/sun.png" alt="Sun" style="width:50%;height:50%;">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12 center">
+                  <button type="button" id = "btn-temp" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Temperature" data-position="top">
+                    <div id="tempSpan"hidden></div>
+                    <img id = "tempImg" src="./src/Pic/Temperature_icon.png" alt="Temp" style="width:50%;height:50%;">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-Light" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip=Light data-position="top">
+                    <img hidden id="lightonImg" src="https://s31.postimg.org/q3t7cj8qz/light2.png" style="width:70%;height:70%;">
+                    <img id = "lightoffImg" src="./src/Pic/light.png" alt="Light" style="width:50%;height:50%;">
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class = "col-md-12 col-sm-12 col-xs-12 btn-row">
           <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-sunshine" class = "btn-floating waves-effect waves-light" title = "Sunshine">
-                  <img id = "sunshineImg" src="./src/Pic/sun.png" alt="Sun" style="width:50%;height:50%;">
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
-            <div>
-              <div class = "col-md-12 col-sm-12 col-xs-12 center">
-                <button type="button" id = "btn-temp" class = "btn-floating waves-effect waves-light" title = "Temperature">
-                  <div id="tempSpan"hidden></div>
-                  <img id = "tempImg" src="./src/Pic/Temperature_icon.png" alt="Temp" style="width:50%;height:50%;">
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
-            <div>
-              <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-Light" class = "btn-floating waves-effect waves-light" title = "Light">
-                  <img hidden id="lightonImg" src="https://s31.postimg.org/q3t7cj8qz/light2.png" style="width:70%;height:70%;">
-                  <img id = "lightoffImg" src="./src/Pic/light.png" alt="Light" style="width:50%;height:50%;">
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
-            <div>
-              <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-motionAlert" class = "btn-floating waves-effect waves-light" title = "Motion Alert">
+                <button type="button" id = "btn-motionAlert" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Motion Alert" data-position="top">
                   <img hidden id="alertonImg" src="https://s31.postimg.org/ab9o2benv/image.png" style="width:70%;height:70%;">
                   <img id = "alertoffImg" src="./src/Pic/motion1.png" alt="Roof" style="width:70%;height:70%;">
                 </button>
@@ -123,7 +127,7 @@
           <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-roof" class = "btn-floating waves-effect waves-light" title = "Roof">
+                <button type="button" id = "btn-roof" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Roof" data-position="top">
                   <img hidden id="roofonImg" src="https://s32.postimg.org/hqb8xg6ad/Emoji_u2614_svg.png" style="width:50%;height:50%;">
                   <img id = "roofoffImg" src="./src/Pic/roof_off.png" alt="Roof" style="width:50%;height:50%;">
                 </button>
@@ -133,7 +137,7 @@
           <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button"  id = "btn-water" class = "btn-floating waves-effect waves-light" title = "Water">
+                <button type="button"  id = "btn-water" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Water" data-position="top">
                   <img hidden id="wateronImg" src="https://s32.postimg.org/uf09wajk5/Water_Drop_Icon_Vector.png" style="width:40%;height:70%;">
                   <img id = "wateroffImg" src="./src/Pic/Water_Drop.png" alt="Water" style="width:40%;height:70%;">
                 </button>
@@ -143,7 +147,9 @@
           <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-refresh" class = "btn-floating waves-effect waves-light" title = "Refresh"><img id = "refreshImg" src="./src/Pic/refresh.png" alt="Refresh" style="width:50%;height:50%;"></button>
+                <button type="button" id = "btn-refresh" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Refresh" data-position="top">
+                  <img id = "refreshImg" src="./src/Pic/refresh.png" alt="Refresh" style="width:50%;height:50%;">
+                </button>
               </div>
             </div>
           </div>
@@ -154,50 +160,50 @@
       <div class="slider" style = "width:100%;">
         <ul class="slides">
           <li>
-            <div class = "col-md-4 col-sm-4 col-xs-4">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="./src/Pic/banana.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Banana<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Banana<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div>
-            </div>
-            <div class = "col-md-4 col-sm-4 col-xs-4">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/office.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <div class = "col-md-4 col-sm-4 col-xs-4">
+                <div class="card small">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="./src/Pic/banana.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Banana<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">This is a link</a></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Banana<i class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class = "col-md-4 col-sm-4 col-xs-4">
-              <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="images/office.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <div class = "col-md-4 col-sm-4 col-xs-4">
+                <div class="card small">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/office.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">This is a link</a></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  </div>
                 </div>
               </div>
+              <div class = "col-md-4 col-sm-4 col-xs-4">
+                <div class="card small">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/office.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">This is a link</a></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  </div>
+                </div>
             </div>
           </li>
           <li>
