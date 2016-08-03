@@ -6,7 +6,13 @@ body {
   height: 100%;
   background-color: white;
 }
-
+@font-face {
+  font-family: myFirstFont;
+  src: url('./fonts/roboto/Roboto-Light.woff');
+}
+.set-font{
+  font-family: myFirstFont !important;
+}
 .panel-heading{
   height: 10%;
 }
@@ -25,6 +31,9 @@ body {
 .color-text {
   color: black !important;
   font-size: 170% !important;
+}
+#card-information{
+  height: 70%;
 }
 .center{
   height: 100%;
@@ -60,6 +69,10 @@ body {
 button.btn-floating {
     height: 140px;
     width: 140px;
+    background-color: #81cfe0;
+}
+.btn-floating:hover {
+    background-color: #F5F5F5;
 }
 
 .slider{
