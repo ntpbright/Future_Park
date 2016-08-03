@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Future Park</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+  <script src="/stylesheets/jquery-3.1.0.min.js"></script>
+  <script src="/libs/exceed.lib.js"></script>
+  <link rel="stylesheet" href="./index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+  /* Prevents slides from flashing */
+  #slides {
+    display:none;
+  }
+  </style>
+  <script src="jquery.slides.min.js"></script>
+
+  <script type="text/javascript" src="./canvasjs.min.js"></script>
+  <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer",
+      {
+        title:{
+          text: "Products of Future Park",
+          fontSize: 30
+        },
+        animationEnabled: true,
+        axisX:{
+          gridColor: "Silver",
+          tickColor: "silver",
+          valueFormatString: "DD/MMM"
+        },
+        toolTip:{
+          shared:true
+        },
+        theme: "theme2",
+        axisY: {
+          gridColor: "Silver",
+          tickColor: "silver"
+        },
+        legend:{
+          verticalAlign: "center",
+          horizontalAlign: "right"
+        },
+        data: [
+          {
+            type: "line",
+            showInLegend: true,
+            lineThickness: 2,
+            name: "Chillies",
+            markerType: "square",
+            color: "#F08080",
+            dataPoints: [
+              { x: new Date(2010,0,3), y: 650 },
+              { x: new Date(2010,0,5), y: 700 },
+              { x: new Date(2010,0,7), y: 710 },
+              { x: new Date(2010,0,9), y: 658 },
+              { x: new Date(2010,0,11), y: 734 },
+              { x: new Date(2010,0,13), y: 963 },
+              { x: new Date(2010,0,15), y: 847 },
+              { x: new Date(2010,0,17), y: 853 },
+              { x: new Date(2010,0,19), y: 869 },
+              { x: new Date(2010,0,21), y: 943 },
+              { x: new Date(2010,0,23), y: 970 }
+            ]
+          },
+          {
+            type: "line",
+            showInLegend: true,
+            name: "Bananas",
+            color: "#20B2AA",
+            lineThickness: 2,
+
+            dataPoints: [
+              { x: new Date(2010,0,3), y: 600 },
+              { x: new Date(2010,0,5), y: 520 },
+              { x: new Date(2010,0,7), y: 580 },
+              { x: new Date(2010,0,9), y: 500 },
+              { x: new Date(2010,0,11), y: 542 },
+              { x: new Date(2010,0,13), y: 680 },
+              { x: new Date(2010,0,15), y: 615 },
+              { x: new Date(2010,0,17), y: 660 },
+              { x: new Date(2010,0,19), y: 546 },
+              { x: new Date(2010,0,21), y: 654 },
+              { x: new Date(2010,0,23), y: 601 }
+            ]
+          },
+          {
+            type: "line",
+            showInLegend: true,
+            name: "Basils",
+            color: "#1F3A93",
+            markerType: "triangle",
+            lineThickness: 2,
+            dataPoints: [
+              { x: new Date(2010,0,3), y: 510 },
+              { x: new Date(2010,0,5), y: 560 },
+              { x: new Date(2010,0,7), y: 540 },
+              { x: new Date(2010,0,9), y: 558 },
+              { x: new Date(2010,0,11), y: 544 },
+              { x: new Date(2010,0,13), y: 693 },
+              { x: new Date(2010,0,15), y: 657 },
+              { x: new Date(2010,0,17), y: 663 },
+              { x: new Date(2010,0,19), y: 639 },
+              { x: new Date(2010,0,21), y: 673 },
+              { x: new Date(2010,0,23), y: 660 }
+            ]
+          }
+        ],
+        legend:{
+          cursor:"pointer",
+          itemclick:function(e){
+            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+            }
+            else{
+              e.dataSeries.visible = true;
+            }
+            chart.render();
+          }
+        }
+      });
+      chart.render();
+    }
+  </script>
+  
+
+</head>
+
+<body>
+  <div id = "title" class="row">
+    <div class="panel-heading">
+      <div class = "col-md-12 col-sm-12 col-xs-12">
+        <div><h1>Future Park<h1></div>
+        </div>
+      </div>
+    </div>
+    <div id="slides" style="width: 100%;">
+      <div class="container">
+        <div class="row">
+          <div class="panel-body">
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-moisture" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">moisture</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-sunshine" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">sunshine</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-water" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">water</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-Light" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">Light</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-motionAlert" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">Motion alert</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-roof" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">Roof</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-temp" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">Temp</p></div>
+              </div>
+            </div>
+            <div class = "col-md-3 col-sm-3 col-xs-3 , center">
+              <div>
+                <div class = "col-md-12 col-sm-12 col-xs-12">
+                  <button type="button" id = "btn-refresh" class = "round-button-circle-small">0</button>
+                </div>
+                <div><p class ="text_nameBtn">Refresh</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div id="chartContainer" style="height: 300px; width: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script type='text/javascript'>
+    $(function(){
+      $("#slides").slidesjs({
+        // width: 940,
+        // height: 150
+      });
+    });
+    </script>
+  </body>
+
+  </html>
