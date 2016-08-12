@@ -25,22 +25,21 @@
     {
       animationEnabled: true,
       title:{
-        text: "The best amount of each products in Future Park"
+        text: "The best amount of each products in August"
       },
       data: [
         {
           type: "column",
           dataPoints: [
-            { label: "Banana", y: 60 },
-            { label: "Chilli", y: 60 },
-            { label: "Basil",  y: 10 },
-            { label: "Cucumber",  y: 80 },
+            { label: "Banana", y: 65 },
+            { label: "Chilli", y: 55 },
+            { label: "Basil",  y: 13 },
+            { label: "Cucumber",  y: 82 },
             { label: "Watermelon",  y: 100 }
           ]
         }
       ]
     });
-
     chart.render();
   }
   </script>
@@ -52,7 +51,7 @@
 
   <div id = "title" class="row">
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" id = "titleName">
         <a href="#" class="brand-logo center">
           <font face="verdana" class="set-font">Future Park</font>
         </a>
@@ -96,7 +95,9 @@
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12 center">
                   <button type="button" id = "btn-sunshine" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Sunshine" data-position="top">
-                    <img id = "sunshineImg" src="./src/Pic/sun.png" alt="Sun" style="width:50%;height:50%;">
+                    <img id = "sunImg" src="./src/Pic/sun.png" alt="Sun" style="width:50%;height:50%;">
+                      <img id = "moonImg" src="https://s32.postimg.org/4xmeh8vg5/Moon_symbol_decrescent_svg.png" alt="Sun" style="width:50%;height:50%;">
+                        <img id = "rainImg" src="https://s31.postimg.org/rvws910vv/rain.png" alt="Sun" style="width:50%;height:50%;">
                   </button>
                 </div>
               </div>
@@ -105,8 +106,8 @@
               <div>
                 <div class = "col-md-12 col-sm-12 col-xs-12">
                   <button type="button" id = "btn-Light" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip=Light data-position="top">
-                    <img hidden id="lightonImg" src="https://s31.postimg.org/jo4hyhzff/light2.png" style="width:70%;height:70%;">
-                    <img id = "lightoffImg" src="https://s31.postimg.org/j3uit8x6j/Elertus_Icon_Light_On_1.png" alt="Light" style="width:60%;height:60%;">
+                    <img hidden id="lightonImg" src="./src/Pic/light2.png" style="width: 75%;height:70%;">
+                    <img id = "lightoffImg" src="./src/Pic/light.png" alt="Light" style="width:75%;height:70%;">
                   </button>
                 </div>
               </div>
@@ -118,9 +119,9 @@
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
                 <button type="button" id = "btn-motionAlert" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Motion Alert" data-position="top">
-                  <img hidden id="alertonImg" src="https://s31.postimg.org/ab9o2benv/image.png" style="width:70%;height:70%;">
+                  <img hidden id="alertonImg" src="./src/Pic/motion2.png" style="width:70%;height:70%;">
                   <img id = "alertoffImg" src="./src/Pic/motion1.png" alt="Roof" style="width:70%;height:70%;">
-                  <img hidden id = "alertoffImg"src="https://s31.postimg.org/4xqo9tse3/motiongif.gif"  style="width:70%;height:70%;">
+                  <img hidden id = "alertImg"src="./src/Pic/motiongif.gif"  style="width:70%;height:70%;">
                 </button>
               </div>
             </div>
@@ -129,7 +130,7 @@
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
                 <button type="button" id = "btn-roof" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Roof" data-position="top">
-                  <img hidden id="roofonImg" src="https://s32.postimg.org/hqb8xg6ad/Emoji_u2614_svg.png" style="width:50%;height:50%;">
+                  <img hidden id="roofonImg" src="src\Pic\roof_on.png" style="width:50%;height:50%;">
                   <img id = "roofoffImg" src="./src/Pic/roof_off.png" alt="Roof" style="width:50%;height:50%;">
                 </button>
               </div>
@@ -139,7 +140,7 @@
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
                 <button type="button"  id = "btn-water" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Water" data-position="top">
-                  <img hidden id="wateronImg" src="https://s32.postimg.org/uf09wajk5/Water_Drop_Icon_Vector.png" style="width:40%;height:70%;">
+                  <img hidden id="wateronImg" src=".\src\Pic\Water_Drop_Icon_Vector.png" style="width:40%;height:70%;">
                   <img id = "wateroffImg" src="./src/Pic/Water_Drop.png" alt="Water" style="width:40%;height:70%;">
                 </button>
               </div>
@@ -148,7 +149,7 @@
           <div class = "col-md-3 col-sm-3 col-xs-3 center home-btn">
             <div>
               <div class = "col-md-12 col-sm-12 col-xs-12">
-                <button type="button" id = "btn-refresh" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Refresh" data-position="top">
+                <button type="button" id = "btn-refresh" class = "btn-floating waves-effect waves-light btn tooltipped" data-delay="50" data-tooltip="Reset" data-position="top">
                   <img id = "refreshImg" src="./src/Pic/refresh.png" alt="Refresh" style="width:50%;height:50%;">
                 </button>
               </div>
@@ -161,18 +162,19 @@
       <div class="slider" style = "width:100%;">
         <ul class="slides">
           <li>
+            <div class="caption left-align">
               <div class = "col-md-4 col-sm-4 col-xs-4">
                 <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="./src/Pic/banana.jpg" style="width:400px; height:230px">
+                    <img class="activator" src="./src/Pic/banana.jpg" style="width:300px; height:230px">
                   </div>
                   <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Banana<i class="material-icons right">more_vert</i></span>
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Banana<i class="material-icons right">close</i></span>
-                    <p>Banana is a tropical fruit. It hardly resists to the windy. Soils for bananas should be fertile mold ,and should drainage air and water well. While farming bananas, you might ponder about the sun shine and the soil. Stop watering if it’s raining on that day.</p>
-                    <p>watering : 20 L./day suitable temperature: 15-30 degrees celsius sunlight: wanted product: after farming 8-10 months / well done in 70-80 days</p>
+                    <p class = "text-card">Banana is a tropical fruit. It hardly resists to the windy. Soils for bananas should be fertile mold ,and should drainage air and water well. While farming bananas, you might ponder about the sun shine and the soil. Stop watering if it’s raining on that day.</p>
+                    <p class = "text-card">watering : 20 L./day suitable temperature: 15-30 degrees celsius sunlight: wanted product: after farming 8-10 months / well done in 70-80 days</p>
                   </div>
                 </div>
               </div>
@@ -186,8 +188,8 @@
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Water melon<i class="material-icons right">close</i></span>
-                    <p>Watermelon grows well in loamy sand soil and well drainage. For detecting dry clay, you should water it everyday. At the end of rainy season, the amount of products would be lesser than in other months.</p>
-                    <p>watering : 10 L./day suitable temperature: 20-35 degrees celsius sunlight: wanted product: after fruit bearing 45 days</p>
+                    <p class = "text-card">Watermelon grows well in loamy sand soil and well drainage. For detecting dry clay, you should water it everyday. At the end of rainy season, the amount of products would be lesser than in other months.</p>
+                    <p class = "text-card">watering : 10 L./day suitable temperature: 20-35 degrees celsius sunlight: wanted product: after fruit bearing 45 days</p>
                   </div>
                 </div>
               </div>
@@ -201,10 +203,11 @@
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Chilli<i class="material-icons right">close</i></span>
-                    <p>Chillie is a vegetable that can grow well in the hot and dry weather, but can’t grow in the cold weather. Chile requires averagely watering and loamy sand soil. Otherwise it would be died when the soil cannot drainage.</p>
-                    <p>watering : 1.6 L./day suitable temperature: more over 35 degrees celsius sunlight: wanted product: after farming 4-6 months</p>
+                    <p class = "text-card">Chillie is a vegetable that can grow well in the hot and dry weather, but can’t grow in the cold weather. Chile requires averagely watering and loamy sand soil. Otherwise it would be died when the soil cannot drainage.</p>
+                    <p class = "text-card">watering : 1.6 L./day suitable temperature: more over 35 degrees celsius sunlight: wanted product: after farming 4-6 months</p>
                   </div>
                 </div>
+              </div>
             </div>
           </li>
           <li>
@@ -247,6 +250,9 @@
   var roofActivate = false;
   var refreshStatus = 0;
   var oldMessage = '0,0,0,0';
+  var mySound;
+  mySound = new Audio("./sound/alert sound.mp4");
+
   document.getElementById("btn-moisture").addEventListener("click", moistureStatusAction);
   document.getElementById("btn-water").addEventListener("click", waterStatusByClick);
   document.getElementById("btn-Light").addEventListener("click", lightStatusByClick);
@@ -396,6 +402,7 @@
       sendMessage(3,0);
       $('#alertoffImg').removeAttr("hidden");
       $('#alertonImg').attr("hidden","");
+        $('#alertImg').attr("hidden","");
       motionActivate = false;
     }
   }
@@ -403,7 +410,9 @@
       if(motionStatus === '1') {
         $('#alertonImg').removeAttr("hidden");
         $('#alertImg').attr("hidden","");
+        mySound.stop();
       }else if(motionStatus === '2') {
+        mySound.play();
         $('#alertImg').removeAttr("hidden");
         $('#alertonImg').attr("hidden","");
       }
@@ -421,15 +430,7 @@
       roofActivate = false;
     }
   }
-  function roofStatusAuto() {
-    if(roofStatus === '0') {
-      $('#roofoffImg').attr("hidden","");
-      $('#roofonImg').removeAttr("hidden");
-    }else {
-      $('#roofoffImg').removeAttr("hidden");
-      $('#roofonImg').attr("hidden","");
-    }
-  }
+  
   function waterStatusByClick() {
     if(!waterActivate) {
       sendMessage(7,1);
@@ -444,7 +445,7 @@
     }
   }
   function waterStatusAuto() {
-    if(waterStatus === '0') {
+    if(waterStatus === '1') {
       $('#wateroffImg').attr("hidden","");
       $('#wateronImg').removeAttr("hidden");
     }else {

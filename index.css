@@ -10,6 +10,12 @@ body {
   font-family: myFirstFont;
   src: url('./fonts/roboto/Roboto-Light.woff');
 }
+.chartContainer{
+  width: 100% !important;
+}
+.text-card{
+  color: black !important;
+}
 .set-font{
   font-family: myFirstFont !important;
 }
